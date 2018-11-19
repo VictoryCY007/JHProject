@@ -18,7 +18,12 @@
 
 #pragma mark -  颜色区
 //主题色 导航栏颜色
-#define CNavBgColor  [UIColor colorWithHexString:@"00AE68"]
+#define CNavBgColor  [UIColor colorWithHexString:@"ffffff"]
+#define YYTabBarSelectColor [UIColor colorWithHexString:@"0073FF"]
+#define YYTabBarNormalColor [UIColor colorWithHexString:@"A6ACB4"]
+#define YYNavigateTitleColor  [UIColor colorWithHexString:@"333333"]
+
+//#define CNavBgColor  [UIColor colorWithHexString:@"00AE68"]
 //#define CNavBgColor  [Ulor colorWithHexString:@"ffffff"]
 #define CNavBgFontColor  [UIColor colorWithHexString:@"ffffff"]
 

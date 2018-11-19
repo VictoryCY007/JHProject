@@ -18,10 +18,10 @@
 #pragma mark ————— 初始化服务 —————
 -(void)initService{
     //注册登录状态监听
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(loginStateChange:)
-                                                 name:KNotificationLoginStateChange
-                                               object:nil];    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(loginStateChange:)
+//                                                 name:KNotificationLoginStateChange
+//                                               object:nil];    
     
     //网络状态监听
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -41,6 +41,18 @@
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
+    
+    
+    self.mainTabBar = [MainTabBarController new];
+    
+    CATransition *anima = [CATransition animation];
+    anima.type = @"cube";//设置动画的类型
+    anima.subtype = kCATransitionFromRight; //设置动画的方向
+    anima.duration = 0.3f;
+    
+    self.window.rootViewController = self.mainTabBar;
+    
+    [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
 }
 
 #pragma mark ————— 初始化网络配置 —————

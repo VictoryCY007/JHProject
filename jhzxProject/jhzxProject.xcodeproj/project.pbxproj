@@ -65,6 +65,10 @@
 		7FCB9CC82199704D000C4C34 /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCB9CBC2199704D000C4C34 /* libSocialWeChat.a */; };
 		7FCB9CC92199704D000C4C34 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCB9CC02199704D000C4C34 /* libSocialQQ.a */; };
 		7FCB9CCA2199704D000C4C34 /* libUMSocialLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCB9CC22199704D000C4C34 /* libUMSocialLog.a */; };
+		7FD82B4921A2A8B3001A3B48 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B4821A2A8B3001A3B48 /* HomeViewController.m */; };
+		7FD82B4C21A2A8C8001A3B48 /* ReportStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B4B21A2A8C8001A3B48 /* ReportStageViewController.m */; };
+		7FD82B4F21A2A8D5001A3B48 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B4E21A2A8D5001A3B48 /* PublishViewController.m */; };
+		7FD82B5221A2A8E2001A3B48 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B5121A2A8E2001A3B48 /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +206,14 @@
 		7FCB9CBF2199704D000C4C34 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
 		7FCB9CC02199704D000C4C34 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
 		7FCB9CC22199704D000C4C34 /* libUMSocialLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocialLog.a; sourceTree = "<group>"; };
+		7FD82B4721A2A8B3001A3B48 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		7FD82B4821A2A8B3001A3B48 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		7FD82B4A21A2A8C8001A3B48 /* ReportStageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportStageViewController.h; sourceTree = "<group>"; };
+		7FD82B4B21A2A8C8001A3B48 /* ReportStageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportStageViewController.m; sourceTree = "<group>"; };
+		7FD82B4D21A2A8D5001A3B48 /* PublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
+		7FD82B4E21A2A8D5001A3B48 /* PublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
+		7FD82B5021A2A8E2001A3B48 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		7FD82B5121A2A8E2001A3B48 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		8E13503AEAB62D6D243134E7 /* libPods-jhzxProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jhzxProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,6 +282,7 @@
 		7FCB9BC321995BD9000C4C34 /* jhzxProject */ = {
 			isa = PBXGroup;
 			children = (
+				7FD82B2D21A2A007001A3B48 /* Modules */,
 				7FCB9DE3219A7853000C4C34 /* AppDelegate */,
 				7FCB9C64219962CD000C4C34 /* Base */,
 				7FCB9C10219962B9000C4C34 /* Utils */,
@@ -546,10 +559,10 @@
 			children = (
 				7FCB9C7C219962CD000C4C34 /* UITabBar+CustomBadge.m */,
 				7FCB9C7D219962CD000C4C34 /* XYTabBar.h */,
-				7FCB9C7E219962CD000C4C34 /* MainTabBarController.m */,
 				7FCB9C7F219962CD000C4C34 /* XYTabBar.m */,
 				7FCB9C80219962CD000C4C34 /* UITabBar+CustomBadge.h */,
 				7FCB9C81219962CD000C4C34 /* MainTabBarController.h */,
+				7FCB9C7E219962CD000C4C34 /* MainTabBarController.m */,
 			);
 			path = TabbarController;
 			sourceTree = "<group>";
@@ -662,6 +675,181 @@
 				7FCB9BD321995BDD000C4C34 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FD82B2D21A2A007001A3B48 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B3321A2A0EA001A3B48 /* Home */,
+				7FD82B3821A2A0FE001A3B48 /* ReportStage */,
+				7FD82B3D21A2A10F001A3B48 /* Publish */,
+				7FD82B4221A2A12C001A3B48 /* Mine */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7FD82B3321A2A0EA001A3B48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B3421A2A0EA001A3B48 /* ViewModel */,
+				7FD82B3521A2A0EA001A3B48 /* Controller */,
+				7FD82B3621A2A0EA001A3B48 /* Model */,
+				7FD82B3721A2A0EA001A3B48 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7FD82B3421A2A0EA001A3B48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FD82B3521A2A0EA001A3B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B4721A2A8B3001A3B48 /* HomeViewController.h */,
+				7FD82B4821A2A8B3001A3B48 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FD82B3621A2A0EA001A3B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD82B3721A2A0EA001A3B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD82B3821A2A0FE001A3B48 /* ReportStage */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B3921A2A0FE001A3B48 /* ViewModel */,
+				7FD82B3A21A2A0FE001A3B48 /* Controller */,
+				7FD82B3B21A2A0FE001A3B48 /* Model */,
+				7FD82B3C21A2A0FE001A3B48 /* View */,
+			);
+			path = ReportStage;
+			sourceTree = "<group>";
+		};
+		7FD82B3921A2A0FE001A3B48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FD82B3A21A2A0FE001A3B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B4A21A2A8C8001A3B48 /* ReportStageViewController.h */,
+				7FD82B4B21A2A8C8001A3B48 /* ReportStageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FD82B3B21A2A0FE001A3B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD82B3C21A2A0FE001A3B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD82B3D21A2A10F001A3B48 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B3E21A2A10F001A3B48 /* ViewModel */,
+				7FD82B3F21A2A10F001A3B48 /* Controller */,
+				7FD82B4021A2A10F001A3B48 /* Model */,
+				7FD82B4121A2A10F001A3B48 /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		7FD82B3E21A2A10F001A3B48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FD82B3F21A2A10F001A3B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B4D21A2A8D5001A3B48 /* PublishViewController.h */,
+				7FD82B4E21A2A8D5001A3B48 /* PublishViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FD82B4021A2A10F001A3B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD82B4121A2A10F001A3B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD82B4221A2A12C001A3B48 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B4321A2A12C001A3B48 /* ViewModel */,
+				7FD82B4421A2A12C001A3B48 /* Controller */,
+				7FD82B4521A2A12C001A3B48 /* Model */,
+				7FD82B4621A2A12C001A3B48 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		7FD82B4321A2A12C001A3B48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FD82B4421A2A12C001A3B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B5021A2A8E2001A3B48 /* MineViewController.h */,
+				7FD82B5121A2A8E2001A3B48 /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FD82B4521A2A12C001A3B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD82B4621A2A12C001A3B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		812F5E135B9238BE4719050C /* Pods */ = {
@@ -859,6 +1047,7 @@
 				7FCB9C57219962B9000C4C34 /* PPNetworkCache.m in Sources */,
 				7FCB9C84219962CD000C4C34 /* XLWebViewController.m in Sources */,
 				7FCB9C0C219962A9000C4C34 /* GameInfo.m in Sources */,
+				7FD82B4C21A2A8C8001A3B48 /* ReportStageViewController.m in Sources */,
 				7FCB9C59219962B9000C4C34 /* SandBoxHelper.m in Sources */,
 				7FCB9C0F219962A9000C4C34 /* ShareManager.m in Sources */,
 				7FCB9C86219962CD000C4C34 /* RootNavigationController.m in Sources */,
@@ -869,6 +1058,7 @@
 				7FCB9C56219962B9000C4C34 /* HeaderModel.m in Sources */,
 				7FCB9C50219962B9000C4C34 /* UIButton+XYButton.m in Sources */,
 				7FCB9C88219962CD000C4C34 /* BaseTableViewCell.m in Sources */,
+				7FD82B4921A2A8B3001A3B48 /* HomeViewController.m in Sources */,
 				7FCB9C5F219962B9000C4C34 /* TAPageControl.m in Sources */,
 				7FCB9C89219962CD000C4C34 /* HSBaseCellModel.m in Sources */,
 				7FCB9C63219962B9000C4C34 /* AESCipher.m in Sources */,
@@ -883,11 +1073,13 @@
 				7FCB9C4F219962B9000C4C34 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				7FCB9C62219962B9000C4C34 /* XYTransition.m in Sources */,
 				7FCB9C5D219962B9000C4C34 /* SDCollectionViewCell.m in Sources */,
+				7FD82B5221A2A8E2001A3B48 /* MineViewController.m in Sources */,
 				7FCB9C8C219962CD000C4C34 /* MainTabBarController.m in Sources */,
 				7FCB9C82219962CD000C4C34 /* XLJSHandler.m in Sources */,
 				7FCB9C4D219962B9000C4C34 /* OpenUDID.m in Sources */,
 				7FCB9C51219962B9000C4C34 /* FFTagsView.m in Sources */,
 				7FCB9C0E219962A9000C4C34 /* UserInfo.m in Sources */,
+				7FD82B4F21A2A8D5001A3B48 /* PublishViewController.m in Sources */,
 				7FCB9BC621995BD9000C4C34 /* AppDelegate.m in Sources */,
 				7FCB9C8D219962CD000C4C34 /* XYTabBar.m in Sources */,
 			);
@@ -1054,6 +1246,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK676XC3F2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/jhzxProject/ThridParty/UMSocial/UMSocialUI",
@@ -1074,7 +1267,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jhzx.jhzxProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1084,6 +1277,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK676XC3F2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/jhzxProject/ThridParty/UMSocial/UMSocialUI",
@@ -1104,7 +1298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jhzx.jhzxProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
