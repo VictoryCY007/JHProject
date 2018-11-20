@@ -44,6 +44,7 @@
     //设置背景色 去掉分割线
     [self setValue:[XYTabBar new] forKey:@"tabBar"];
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
+    [self.tabBar setTranslucent:NO];
     [self.tabBar setBackgroundImage:[UIImage new]];
     //通过这两个参数来调整badge位置
     //    [self.tabBar setTabIconWidth:29];
@@ -54,21 +55,17 @@
 -(void)setUpAllChildViewController{
     _VCS = @[].mutableCopy;
     HomeViewController *homeVC = [[HomeViewController alloc]init];
-//    WaterFallListViewController *homeVC = [WaterFallListViewController new];
-//    PersonListViewController *homeVC = [[PersonListViewController alloc]init];
-    [self setupChildViewController:homeVC title:@"首页" imageName:@"icon_tabbar_homepage" seleceImageName:@"icon_tabbar_homepage_selected"];
+    [self setupChildViewController:homeVC title:@"首页" imageName:@"tabbar_home_normal" seleceImageName:@"tabbar_home_selected"];
 //
     ReportStageViewController *stageVC = [[ReportStageViewController alloc]init];
-//    ToolDemoViewController *makeFriendVC = [[ToolDemoViewController alloc]init];
-    [self setupChildViewController:stageVC title:@"爆料台" imageName:@"icon_tabbar_onsite" seleceImageName:@"icon_tabbar_onsite_selected"];
+    [self setupChildViewController:stageVC title:@"爆料台" imageName:@"tabbar_stage_normal" seleceImageName:@"tabbar_stage_selected"];
 //
-//    MsgViewController *msgVC = [[MsgViewController alloc]init];
     PublishViewController *publishVC = [PublishViewController new];
-    [self setupChildViewController:publishVC title:@"发布" imageName:@"icon_tabbar_merchant_normal" seleceImageName:@"icon_tabbar_merchant_selected"];
+    [self setupChildViewController:publishVC title:@"发布" imageName:@"tabbar_publish_normal" seleceImageName:@"tabbar_publish_selected"];
 //
 //    
     MineViewController *mineVC = [[MineViewController alloc]init];
-    [self setupChildViewController:mineVC title:@"我的" imageName:@"icon_tabbar_mine" seleceImageName:@"icon_tabbar_mine_selected"];
+    [self setupChildViewController:mineVC title:@"我的" imageName:@"tabbar_mine_normal" seleceImageName:@"tabbar_mine_selected"];
 //
     self.viewControllers = _VCS;
 }

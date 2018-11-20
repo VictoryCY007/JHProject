@@ -1244,7 +1244,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31D7FCF3ED073D4A78FA4538 /* Pods-jhzxProject.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XK676XC3F2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1275,7 +1274,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FCF8E8401B64BC1A1797069 /* Pods-jhzxProject.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XK676XC3F2;
 				FRAMEWORK_SEARCH_PATHS = (
