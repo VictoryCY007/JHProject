@@ -69,6 +69,7 @@
 		7FD82B4C21A2A8C8001A3B48 /* ReportStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B4B21A2A8C8001A3B48 /* ReportStageViewController.m */; };
 		7FD82B4F21A2A8D5001A3B48 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B4E21A2A8D5001A3B48 /* PublishViewController.m */; };
 		7FD82B5221A2A8E2001A3B48 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B5121A2A8E2001A3B48 /* MineViewController.m */; };
+		7FD82B5A21A4128E001A3B48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD82B5921A4128E001A3B48 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,8 @@
 		7FD82B4E21A2A8D5001A3B48 /* PublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		7FD82B5021A2A8E2001A3B48 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		7FD82B5121A2A8E2001A3B48 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		7FD82B5821A4128E001A3B48 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7FD82B5921A4128E001A3B48 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8E13503AEAB62D6D243134E7 /* libPods-jhzxProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jhzxProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -680,6 +683,7 @@
 		7FD82B2D21A2A007001A3B48 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7FD82B5321A41275001A3B48 /* Login */,
 				7FD82B3321A2A0EA001A3B48 /* Home */,
 				7FD82B3821A2A0FE001A3B48 /* ReportStage */,
 				7FD82B3D21A2A10F001A3B48 /* Publish */,
@@ -846,6 +850,47 @@
 			sourceTree = "<group>";
 		};
 		7FD82B4621A2A12C001A3B48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FD82B5321A41275001A3B48 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B5421A41275001A3B48 /* ViewModel */,
+				7FD82B5521A41275001A3B48 /* Controller */,
+				7FD82B5621A41275001A3B48 /* Model */,
+				7FD82B5721A41275001A3B48 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7FD82B5421A41275001A3B48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FD82B5521A41275001A3B48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD82B5821A4128E001A3B48 /* LoginViewController.h */,
+				7FD82B5921A4128E001A3B48 /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FD82B5621A41275001A3B48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD82B5721A41275001A3B48 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1045,6 +1090,7 @@
 				7FCB9C8A219962CD000C4C34 /* RootViewController.m in Sources */,
 				7FCB9C55219962B9000C4C34 /* PPNetworkHelper.m in Sources */,
 				7FCB9C57219962B9000C4C34 /* PPNetworkCache.m in Sources */,
+				7FD82B5A21A4128E001A3B48 /* LoginViewController.m in Sources */,
 				7FCB9C84219962CD000C4C34 /* XLWebViewController.m in Sources */,
 				7FCB9C0C219962A9000C4C34 /* GameInfo.m in Sources */,
 				7FD82B4C21A2A8C8001A3B48 /* ReportStageViewController.m in Sources */,
@@ -1267,6 +1313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jhzx.jhzxProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1297,6 +1344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jhzx.jhzxProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

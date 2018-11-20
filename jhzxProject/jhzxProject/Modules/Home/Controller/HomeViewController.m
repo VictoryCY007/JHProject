@@ -7,8 +7,10 @@
 //
 
 #import "HomeViewController.h"
+#import "LoginViewController.h"
+#import "XYTransitionProtocol.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<XYTransitionProtocol>
 
 @end
 
@@ -22,6 +24,9 @@
 }
 
 
+-(BOOL)isNeedTransition{
+    return YES;
+}
 
 - (void)setupNavi{
 //    [self addNavigationItemWithTitles:@[@"东莞"] isLeft:YES target:self action:@selector(naviBtnClick:) tags:@[@1000]];
@@ -60,6 +65,9 @@
 
 
 -(void)naviBtnClick:(UIButton *)btn{
+    LoginViewController *vc = [LoginViewController new];
+    vc.isHidenNaviBar = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 
