@@ -43,6 +43,7 @@
 -(void)setUpTabBar{
     //设置背景色 去掉分割线
     [self setValue:[XYTabBar new] forKey:@"tabBar"];
+    [self.tabBar setClipsToBounds:YES];
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
     [self.tabBar setTranslucent:NO];
     [self.tabBar setBackgroundImage:[UIImage new]];

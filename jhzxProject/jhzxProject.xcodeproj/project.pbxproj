@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52D6ADA8BC7C6CC87EB391A9 /* libPods-jhzxProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13503AEAB62D6D243134E7 /* libPods-jhzxProject.a */; };
 		7F83E23D21A538F4003FEF12 /* UIBtton(ColorSetting).m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */; };
+		7F83E24021A56E84003FEF12 /* YYMineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E23F21A56E84003FEF12 /* YYMineTopView.m */; };
 		7FCB9BC621995BD9000C4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB9BC521995BD9000C4C34 /* AppDelegate.m */; };
 		7FCB9BCE21995BDD000C4C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCD21995BDD000C4C34 /* Assets.xcassets */; };
 		7FCB9BD121995BDD000C4C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCF21995BDD000C4C34 /* LaunchScreen.storyboard */; };
@@ -95,6 +96,8 @@
 		4FCF8E8401B64BC1A1797069 /* Pods-jhzxProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jhzxProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-jhzxProject/Pods-jhzxProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F83E23B21A538F4003FEF12 /* UIBtton(ColorSetting).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBtton(ColorSetting).h"; sourceTree = "<group>"; };
 		7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBtton(ColorSetting).m"; sourceTree = "<group>"; };
+		7F83E23E21A56E84003FEF12 /* YYMineTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMineTopView.h; sourceTree = "<group>"; };
+		7F83E23F21A56E84003FEF12 /* YYMineTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMineTopView.m; sourceTree = "<group>"; };
 		7FCB9BC121995BD9000C4C34 /* jhzxProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jhzxProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCB9BC421995BD9000C4C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FCB9BC521995BD9000C4C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -857,6 +860,8 @@
 		7FD82B4621A2A12C001A3B48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F83E23E21A56E84003FEF12 /* YYMineTopView.h */,
+				7F83E23F21A56E84003FEF12 /* YYMineTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				7FCB9C8B219962CD000C4C34 /* UITabBar+CustomBadge.m in Sources */,
 				7FCB9C87219962CD000C4C34 /* BaseRequestAPI.m in Sources */,
 				7FCB9C5C219962B9000C4C34 /* UIView+SDExtension.m in Sources */,
+				7F83E24021A56E84003FEF12 /* YYMineTopView.m in Sources */,
 				7FCB9C54219962B9000C4C34 /* AdPageView.m in Sources */,
 				7FCB9C09219962A9000C4C34 /* IAPManager.m in Sources */,
 				7FCB9C8A219962CD000C4C34 /* RootViewController.m in Sources */,
