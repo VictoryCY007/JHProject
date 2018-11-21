@@ -8,9 +8,8 @@
 
 #import "HomeViewController.h"
 #import "LoginViewController.h"
-#import "XYTransitionProtocol.h"
 
-@interface HomeViewController ()<XYTransitionProtocol>
+@interface HomeViewController ()
 
 @end
 
@@ -65,9 +64,18 @@
 
 
 -(void)naviBtnClick:(UIButton *)btn{
+    btn.userInteractionEnabled = NO;
     LoginViewController *vc = [LoginViewController new];
     vc.isHidenNaviBar = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    
+    //GCD延迟
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        btn.userInteractionEnabled = YES;
+
+    });
+
 
 }
 

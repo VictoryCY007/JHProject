@@ -60,6 +60,7 @@
 #import "UserManager.h"
 #import "IMManager.h"
 #import "UIButton+XYButton.h"
+#import "UIBtton(ColorSetting).h"
 #import <SDAutoLayout.h>
 
 //第三方

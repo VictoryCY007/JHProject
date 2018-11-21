@@ -24,6 +24,16 @@
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 #define kTopHeight (kStatusBarHeight + kNavBarHeight)
 
+//状态栏高
+#define statusBarHeight (20+(IS_iPhoneX ? 24 : 0))
+//导航高
+#define navHeight 44
+#define navCountHeight (IS_iPhoneX ? (64+24) : 64)
+#define tabBarHeight (49+(IS_iPhoneX ? 34 : 0))
+#define customTabBarH 49
+
+//是否为IphoneX
+#define IS_iPhoneX (KScreenWidth == 375 && KScreenHeight == 812)
 //获取屏幕宽高
 #define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height

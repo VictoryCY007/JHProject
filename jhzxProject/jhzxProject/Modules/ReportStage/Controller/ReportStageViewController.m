@@ -16,17 +16,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupNavi];
+    [self setupUI];
 }
 
-/*
-#pragma mark - Navigation
+- (void)setupNavi{
+    [self addNavigationItemWithTitles:@[@"分享"] isLeft:YES target:self action:@selector(naviBtnClick:) tags:@[@1000]];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 80, 30);
+    [btn setTitle:@"我要爆料" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(naviBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.font = SYSTEMFONT(16);
+    [btn setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+
+    [btn setTitleColor:YYMainThemeColor forState:UIControlStateNormal];
+
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem = item;
+    
 }
-*/
+
+- (void)setupUI{
+    [self.view setBackgroundColor:YYMainBackGroudColor];
+    
+}
+
+-(void)naviBtnClick:(UIButton *)btn{
+
+}
+
 
 @end

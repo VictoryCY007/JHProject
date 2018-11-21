@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52D6ADA8BC7C6CC87EB391A9 /* libPods-jhzxProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13503AEAB62D6D243134E7 /* libPods-jhzxProject.a */; };
+		7F83E23D21A538F4003FEF12 /* UIBtton(ColorSetting).m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */; };
 		7FCB9BC621995BD9000C4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB9BC521995BD9000C4C34 /* AppDelegate.m */; };
 		7FCB9BCE21995BDD000C4C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCD21995BDD000C4C34 /* Assets.xcassets */; };
 		7FCB9BD121995BDD000C4C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCF21995BDD000C4C34 /* LaunchScreen.storyboard */; };
@@ -92,6 +93,8 @@
 /* Begin PBXFileReference section */
 		31D7FCF3ED073D4A78FA4538 /* Pods-jhzxProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jhzxProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jhzxProject/Pods-jhzxProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4FCF8E8401B64BC1A1797069 /* Pods-jhzxProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jhzxProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-jhzxProject/Pods-jhzxProject.release.xcconfig"; sourceTree = "<group>"; };
+		7F83E23B21A538F4003FEF12 /* UIBtton(ColorSetting).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBtton(ColorSetting).h"; sourceTree = "<group>"; };
+		7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBtton(ColorSetting).m"; sourceTree = "<group>"; };
 		7FCB9BC121995BD9000C4C34 /* jhzxProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jhzxProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCB9BC421995BD9000C4C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FCB9BC521995BD9000C4C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -375,11 +378,13 @@
 			isa = PBXGroup;
 			children = (
 				7FCB9C15219962B9000C4C34 /* UIButton+XYButton.h */,
+				7FCB9C1A219962B9000C4C34 /* UIButton+XYButton.m */,
 				7FCB9C16219962B9000C4C34 /* UIViewController+AlertViewAndActionSheet.h */,
 				7FCB9C17219962B9000C4C34 /* UICollectionView+IndexPath.m */,
 				7FCB9C18219962B9000C4C34 /* UICollectionView+IndexPath.h */,
 				7FCB9C19219962B9000C4C34 /* UIViewController+AlertViewAndActionSheet.m */,
-				7FCB9C1A219962B9000C4C34 /* UIButton+XYButton.m */,
+				7F83E23B21A538F4003FEF12 /* UIBtton(ColorSetting).h */,
+				7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1120,6 +1125,7 @@
 				7FCB9C62219962B9000C4C34 /* XYTransition.m in Sources */,
 				7FCB9C5D219962B9000C4C34 /* SDCollectionViewCell.m in Sources */,
 				7FD82B5221A2A8E2001A3B48 /* MineViewController.m in Sources */,
+				7F83E23D21A538F4003FEF12 /* UIBtton(ColorSetting).m in Sources */,
 				7FCB9C8C219962CD000C4C34 /* MainTabBarController.m in Sources */,
 				7FCB9C82219962CD000C4C34 /* XLJSHandler.m in Sources */,
 				7FCB9C4D219962B9000C4C34 /* OpenUDID.m in Sources */,
