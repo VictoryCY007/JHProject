@@ -10,6 +10,7 @@
 		52D6ADA8BC7C6CC87EB391A9 /* libPods-jhzxProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E13503AEAB62D6D243134E7 /* libPods-jhzxProject.a */; };
 		7F83E23D21A538F4003FEF12 /* UIBtton(ColorSetting).m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */; };
 		7F83E24021A56E84003FEF12 /* YYMineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E23F21A56E84003FEF12 /* YYMineTopView.m */; };
+		7F83E24321A64DB9003FEF12 /* PPMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83E24221A64DB9003FEF12 /* PPMineTableViewCell.m */; };
 		7FCB9BC621995BD9000C4C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB9BC521995BD9000C4C34 /* AppDelegate.m */; };
 		7FCB9BCE21995BDD000C4C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCD21995BDD000C4C34 /* Assets.xcassets */; };
 		7FCB9BD121995BDD000C4C34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCB9BCF21995BDD000C4C34 /* LaunchScreen.storyboard */; };
@@ -98,6 +99,8 @@
 		7F83E23C21A538F4003FEF12 /* UIBtton(ColorSetting).m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBtton(ColorSetting).m"; sourceTree = "<group>"; };
 		7F83E23E21A56E84003FEF12 /* YYMineTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMineTopView.h; sourceTree = "<group>"; };
 		7F83E23F21A56E84003FEF12 /* YYMineTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMineTopView.m; sourceTree = "<group>"; };
+		7F83E24121A64DB9003FEF12 /* PPMineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMineTableViewCell.h; sourceTree = "<group>"; };
+		7F83E24221A64DB9003FEF12 /* PPMineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPMineTableViewCell.m; sourceTree = "<group>"; };
 		7FCB9BC121995BD9000C4C34 /* jhzxProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jhzxProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCB9BC421995BD9000C4C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FCB9BC521995BD9000C4C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -862,6 +865,8 @@
 			children = (
 				7F83E23E21A56E84003FEF12 /* YYMineTopView.h */,
 				7F83E23F21A56E84003FEF12 /* YYMineTopView.m */,
+				7F83E24121A64DB9003FEF12 /* PPMineTableViewCell.h */,
+				7F83E24221A64DB9003FEF12 /* PPMineTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1129,6 +1134,7 @@
 				7FCB9C61219962B9000C4C34 /* TAAbstractDotView.m in Sources */,
 				7FCB9C4F219962B9000C4C34 /* UIViewController+AlertViewAndActionSheet.m in Sources */,
 				7FCB9C62219962B9000C4C34 /* XYTransition.m in Sources */,
+				7F83E24321A64DB9003FEF12 /* PPMineTableViewCell.m in Sources */,
 				7FCB9C5D219962B9000C4C34 /* SDCollectionViewCell.m in Sources */,
 				7FD82B5221A2A8E2001A3B48 /* MineViewController.m in Sources */,
 				7F83E23D21A538F4003FEF12 /* UIBtton(ColorSetting).m in Sources */,

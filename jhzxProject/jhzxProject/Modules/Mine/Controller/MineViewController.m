@@ -7,7 +7,7 @@
 //
 
 #import "MineViewController.h"
-
+#import "PPMineTableViewCell.h"
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *iconImagV;
@@ -27,6 +27,9 @@
 - (void)setupUI{
     [self.view setBackgroundColor:YYMainBackGroudColor];
     
+    UIView *containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, 190 + statusBarHeight + 80 + 15)];
+    containerView.backgroundColor = YYMainBackGroudColor;
+    
     UIView *topView = [UIView new];
     topView.frame = CGRectMake(0, 0, KScreenWidth, 190 + statusBarHeight);
     
@@ -39,7 +42,7 @@
     gradientLayer.endPoint = CGPointMake(1, 0);     //
     [topView.layer addSublayer:gradientLayer];
 
-    [self.view addSubview:topView];
+    [containerView addSubview:topView];
     
     
     UIButton *leftBtn = [UIButton new];
@@ -81,7 +84,7 @@
     centerView.backgroundColor = KWhiteColor;
     
     
-    [self.view addSubview:centerView];
+    [containerView addSubview:centerView];
 
     centerView.sd_layout.heightIs(80)
     .widthIs(KScreenWidth).leftEqualToView(topView).topSpaceToView(topView, 0);
@@ -89,10 +92,63 @@
     
     
     self.tableView.height = KScreenHeight - kTabBarHeight;
+    self.tableView.backgroundColor = YYMainBackGroudColor;
     self.tableView.mj_header.hidden = YES;
     self.tableView.mj_footer.hidden = YES;
+    self.tableView.rowHeight = 55;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = containerView;
+
+
+    [self.view addSubview:self.tableView];
+
+}
+
+
+
+#pragma mark ————— tableview 代理 —————
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *CellIdentifier = @"PPMineTableViewCell";
+    
+    PPMineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        cell = [[PPMineTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+    }
+    cell.backgroundColor = KWhiteColor;
+    cell.separatorInset = UIEdgeInsetsMake(0, 30, 0, 30);
+
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    ////// 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅 //////
+    
+    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
+    
+    //////////////////////////////////////////////////////////////////////
+    
+    cell.backgroundColor = [UIColor clearColor];
+    return cell;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
 }
 
 
