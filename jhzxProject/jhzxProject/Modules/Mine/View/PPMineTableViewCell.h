@@ -10,4 +10,8 @@
 
 @interface PPMineTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *iconImagV;
+
+@property (nonatomic, strong) UILabel *selectLabel;
+
 @end

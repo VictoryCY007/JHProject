@@ -8,9 +8,16 @@
 
 #import "MineViewController.h"
 #import "PPMineTableViewCell.h"
+#import "PPMineCenterBtn.h"
+#import "PPMyPointViewController.h"
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *iconImagV;
+
+
+@property (nonatomic, copy) NSArray *iconImagvArray;
+
+@property (nonatomic, copy) NSArray *iconTitleArray;
 
 @end
 
@@ -20,6 +27,9 @@
     [super viewDidLoad];
     self.isHidenNaviBar = YES;
     self.StatusBarStyle = UIStatusBarStyleLightContent;
+    _iconImagvArray = @[@"mine_enter_icon",@"mine_cooperation_icon",@"mine_about_icon",@"mine_guider_icon",@"mine_logout_icon"];
+    
+    _iconTitleArray = @[@"我要入驻",@"商务合作",@"关于我们",@"用户指南",@"退出登录"];
 
     [self setupUI];
 }
@@ -89,6 +99,40 @@
     centerView.sd_layout.heightIs(80)
     .widthIs(KScreenWidth).leftEqualToView(topView).topSpaceToView(topView, 0);
     
+  //
+    PPMineCenterBtn *pointClickBtn = [PPMineCenterBtn new];
+    pointClickBtn.numberLabel.textColor = [UIColor colorWithHexString:@"FF4500"];
+    pointClickBtn.numberLabel.text = @"999";
+    pointClickBtn.desclLabel.text = @"我的积分";
+    [pointClickBtn addTapBlock:^(UIButton *btn) {
+        PPMyPointViewController *Vc = [PPMyPointViewController new];
+        [self.navigationController pushViewController:Vc animated:YES];
+    }];
+    [centerView addSubview:pointClickBtn];
+    
+    pointClickBtn.sd_layout.heightIs(centerView.height)
+    .leftSpaceToView(centerView, 0).topSpaceToView(centerView, 0)
+    .widthIs(centerView.width/3);
+    
+    PPMineCenterBtn *collectClickBtn = [PPMineCenterBtn new];
+    collectClickBtn.numberLabel.textColor = [UIColor colorWithHexString:@"FFB400"];
+    collectClickBtn.numberLabel.text = @"999";
+    collectClickBtn.desclLabel.text = @"我的收藏";
+    [centerView addSubview:collectClickBtn];
+    
+    collectClickBtn.sd_layout.heightIs(centerView.height)
+    .leftSpaceToView(pointClickBtn, 0).topSpaceToView(centerView, 0)
+    .widthIs(centerView.width/3);
+    
+    PPMineCenterBtn *followClickBtn = [PPMineCenterBtn new];
+    followClickBtn.numberLabel.textColor = [UIColor colorWithHexString:@"0072FF"];
+    followClickBtn.numberLabel.text = @"999";
+    followClickBtn.desclLabel.text = @"我的关注";
+    [centerView addSubview:followClickBtn];
+    
+    followClickBtn.sd_layout.heightIs(centerView.height)
+    .leftSpaceToView(collectClickBtn, 0).topSpaceToView(centerView, 0)
+    .widthIs(centerView.width/3);
     
     
     self.tableView.height = KScreenHeight - kTabBarHeight;
@@ -127,7 +171,10 @@
     }
     cell.backgroundColor = KWhiteColor;
     cell.separatorInset = UIEdgeInsetsMake(0, 30, 0, 30);
-
+    
+    cell.iconImagV.image = IMAGE_NAMED(_iconImagvArray[indexPath.row]);
+    
+    cell.selectLabel.text = _iconTitleArray[indexPath.row];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
