@@ -14,6 +14,9 @@
 
 @property (nonatomic, strong) UIImageView *iconImagV;
 
+@property (nonatomic, strong) UILabel *nickNameLabel;
+
+@property (nonatomic, strong) UILabel *phoneLabel;
 
 @property (nonatomic, copy) NSArray *iconImagvArray;
 
@@ -88,6 +91,73 @@
     _iconImagV.sd_layout.heightIs(63)
     .widthIs(63).leftEqualToView(leftBtn).topSpaceToView(leftBtn, 55);
     
+    
+    
+    
+    
+    UIImageView *modifyImagV = [UIImageView new];
+    modifyImagV.image = IMAGE_NAMED(@"mine_modify_icon");
+    
+    
+    [topView addSubview:modifyImagV];
+    
+    modifyImagV.sd_layout.heightIs(15)
+    .widthIs(15).leftSpaceToView(_iconImagV, 10).topSpaceToView(leftBtn, 69);
+    
+    
+    _nickNameLabel = [UILabel new];
+    _nickNameLabel.font = BOLDSYSTEMFONT(18);
+    _nickNameLabel.textColor = KWhiteColor;
+    _nickNameLabel.text = @"点击设置昵称";
+    
+    [topView addSubview:_nickNameLabel];
+
+    _nickNameLabel.sd_layout.bottomEqualToView(modifyImagV).leftSpaceToView(modifyImagV, 5).heightIs(20);
+    [_nickNameLabel setSingleLineAutoResizeWithMaxWidth:200];
+    
+    
+    _phoneLabel = [UILabel new];
+    _phoneLabel.font = [UIFont systemFontOfSize:14.f weight:UIFontWeightMedium];
+    _phoneLabel.textColor = KWhiteColor;
+    _phoneLabel.text = @"15274893099";
+    
+    [topView addSubview:_phoneLabel];
+    
+    _phoneLabel.sd_layout.leftEqualToView(modifyImagV)
+    .heightIs(20).topSpaceToView(_nickNameLabel, 5);
+    [_phoneLabel setSingleLineAutoResizeWithMaxWidth:200];
+    
+    
+    UIButton *signBtn = [UIButton new];
+    signBtn.backgroundColor = KWhiteColor;
+    signBtn.sd_cornerRadius = @(15);
+    
+    [topView addSubview:signBtn];
+    
+    signBtn.sd_layout.heightIs(30).widthIs(100)
+    .rightSpaceToView(topView, -10).centerYEqualToView(_iconImagV);
+    
+    
+    UIImageView *signImagV = [UIImageView new];
+    signImagV.image = IMAGE_NAMED(@"mine_signed_icon");
+    
+    
+    [signBtn addSubview:signImagV];
+    
+    signImagV.sd_layout.heightIs(15).widthIs(15).centerYEqualToView(signBtn)
+    .leftSpaceToView(signBtn, 12);
+    
+    UILabel *signedLabel = [UILabel new];
+    signedLabel.font = [UIFont systemFontOfSize:12.f weight:UIFontWeightMedium];
+    signedLabel.textColor = YYMainThemeColor;
+    signedLabel.text = @"签到+30";
+    
+    [signBtn addSubview:signedLabel];
+    
+    signedLabel.sd_layout.heightIs(15).centerYEqualToView(signBtn)
+    .leftSpaceToView(signImagV, 4);
+    
+    [signedLabel setSingleLineAutoResizeWithMaxWidth:signBtn.width - 40];
     
     ///
     UIView *centerView = [UIView new];

@@ -24,11 +24,7 @@
 }
 
 - (void)setupUI{
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(12, kStatusBarHeight+12, 20, 20);
-    [backBtn setImage:IMAGE_NAMED(@"back_icon") forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(backBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backBtn];
+
     
     UIImageView *topBackView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, statusBarHeight + 240)];
     topBackView.image = IMAGE_NAMED(@"mine_point_topback");
@@ -36,7 +32,11 @@
     [self.view addSubview:topBackView];
     
     
-    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(12, kStatusBarHeight+12, 20, 20);
+    [backBtn setImage:IMAGE_NAMED(@"back_icon-1") forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backBtn];
     
     
 }
